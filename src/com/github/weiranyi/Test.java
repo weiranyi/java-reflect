@@ -11,7 +11,7 @@ public class Test {
 
         Animal animal;
         try {
-            animal = (Animal) Class.forName("com.github.weiranyi."+ op).getDeclaredConstructor().newInstance();
+            animal = (Animal) Class.forName("com.github.weiranyi." + op).getDeclaredConstructor().newInstance();
             System.out.println(animal);
         } catch (InstantiationException e) {
             //对象无法被实例化,抛出"实例化异常",例如抽象类无法被实例化

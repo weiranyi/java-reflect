@@ -27,7 +27,8 @@ public class Animal {
     public void setAge(int age) {
         this.age = age;
     }
-    public void eat(){
+
+    public void eat() {
         System.out.println("吃饭啦");
     }
 
