@@ -8,7 +8,6 @@ public class Test {
         Scanner scanner = new Scanner(System.in);
         System.out.print("请输入您要Cat还是Dog:");
         String op = scanner.next();
-
         Animal animal;
         try {
             animal = (Animal) Class.forName("com.github.weiranyi." + op).getDeclaredConstructor().newInstance();
