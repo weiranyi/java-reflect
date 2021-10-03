@@ -36,7 +36,7 @@ public class Animal {
                 '}';
     }
 
-    public Animal reName(String name){
+    public Animal reName(String name) {
         this.name = name;
         return this;
     }

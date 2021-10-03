@@ -1,6 +1,7 @@
 package com.github.weiranyi.translation;
 
-public class en implements Weiran{
+//en
+public class En implements Weiran {
 
     @Override
     public String say() {
