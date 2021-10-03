@@ -2,6 +2,15 @@ package com.github.weiranyi.entity;
 
 public class People extends Animal {
     public String major;
+    private int phoneNumber = 188191;
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     public People() {
     }
