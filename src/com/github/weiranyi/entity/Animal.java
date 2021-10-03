@@ -1,13 +1,13 @@
-package com.github.weiranyi;
+package com.github.weiranyi.entity;
 
 public class Animal {
     private String name;
-    private int age;
+    private Integer age;
 
     public Animal() {
     }
 
-    public Animal(String name, int age) {
+    public Animal(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
@@ -20,16 +20,12 @@ public class Animal {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
-    }
-
-    public void eat() {
-        System.out.println("吃饭啦");
     }
 
     @Override
@@ -38,5 +34,10 @@ public class Animal {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public Animal reName(String name){
+        this.name = name;
+        return this;
     }
 }

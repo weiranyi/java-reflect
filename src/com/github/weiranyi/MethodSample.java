@@ -1,24 +1,31 @@
 package com.github.weiranyi;
 
+import com.github.weiranyi.entity.Animal;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
-//构造函数
-public class Test2 {
+public class MethodSample {
     public static void main(String[] args) {
         try {
-            Class animalClass = Class.forName("com.github.weiranyi." + "Cat");
+            Class animalClass = Class.forName("com.github.weiranyi.entity.Dog");
             Constructor constructor = animalClass.getConstructor(new Class[]{
                     String.class, Integer.class
             });
-            Animal animal = (Animal) constructor.newInstance("小喵", 6);
-            System.out.println(animal);
+            Animal animal = (Animal) constructor.newInstance(new Object[]{
+                    "大白", 5
+            });
+            Method reNameMethod = animalClass.getMethod("reName", new Class[]{
+                    String.class
+            });
+            Animal animal1=(Animal)reNameMethod.invoke(animal,new Object[]{"小白"});
+            System.out.println(animal1);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
-            //当被调用的方法的内部抛出了异常而没有被捕获时
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
